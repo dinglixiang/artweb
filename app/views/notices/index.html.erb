@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Listing notices</h1>
+
+<% @notices.each do |notice| %>
+    <%= render :partial => notice %>
+    <%= link_to 'Edit', edit_notice_path(notice) %>
+    <%= link_to 'Destroy', notice, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Notice', new_notice_path %>
+</div>
+

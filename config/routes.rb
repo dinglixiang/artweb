@@ -1,4 +1,7 @@
 Artweb::Application.routes.draw do
+  resources :notices
+
+
   root :to => 'static_pages#home'
 
   #match '/home', to: "static_pages#home"
