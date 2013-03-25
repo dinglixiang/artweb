@@ -2,8 +2,9 @@ class NoticesController < ApplicationController
   # GET /notices
   # GET /notices.json
   def index
-    @notices = Notice.all
-
+    notices = Notice.all
+    #@notices = Notice.paginate(page: params[:page], :per_page => 15, :order => 'created_at desc')
+    @notices = Kaminari.paginate_array(notices).page(params[:page]).per(10)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @notices }

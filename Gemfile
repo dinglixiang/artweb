@@ -5,8 +5,12 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+#gem 'will_paginate'
+gem 'kaminari'
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
+
+gem 'factory_girl_rails', '4.1.0'
 
 gem 'sqlite3', :group => [:development, :test]
 group :production do
